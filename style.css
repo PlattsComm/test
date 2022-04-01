@@ -1,0 +1,282 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ------------------------ start editing here ---------------*/
+
+body{
+	background-color: purple;
+	width: 100%;
+}
+
+h1{
+	color: white;
+	font-family: 'Roboto Slab', Verdana, sans serif;
+	font-size: 60px;
+	font-weight: 400;
+}
+
+/* ------------------------ header code ---------------*/
+
+header{
+	background-color: blue;
+	width: 96%;
+	padding: 2% 2% 4% 2%;
+	overflow: auto;/*--allows for proper height to be rendered when all children have a float--*/
+	background-image: url('image1.jpg');
+	background-size: cover;
+	position: fixed;
+	z-index: 20;
+}
+
+#logo{
+	width: 30%;
+	background-color: tan;
+	float: left;/*--allows for content to sit side by side--*/
+	transform: translate(0px, 10px);
+}
+
+nav{
+	width: 70%;
+	background-color: white;
+	float: left;/*--allows for content to sit side by side--*/
+}
+
+ul{
+	float: left;
+}
+
+li{
+	display: inline-block;
+	background-color: green;
+	font-family: 'Roboto Slab', Verdana, sans serif;
+	font-size: 40px;
+	font-weight: 800;
+	color: black;
+	text-decoration: none;
+}
+
+li a{
+	color: black;
+	text-decoration: none;
+}
+
+/* ------------------------ section code ---------------*/
+
+section{
+	background-color: red;
+	width: 100%;
+	overflow: auto;
+}
+
+#two{
+	padding-top: 175px;
+}
+
+.columnTwo{
+	height: 15px;
+	transition: height 1s;
+	transition-timing-function: ease-in-out;
+	overflow: hidden;
+}
+
+.columnTwo:hover{
+	height:300px;
+}
+
+
+@keyframes colorShift{
+	from{background-color: orange;}
+    to{background-color: yellow;}
+}
+
+
+#three{
+	animation-name: colorShift;
+	animation-duration: 4s;
+	animation-delay: 2s;
+	background-color: yellow;
+	animation-play-state: paused;
+}
+
+#three:hover{
+	animation-play-state: running;
+}
+
+.columnTwo{
+	background-color: pink;
+	width: 44%;
+	float: left;
+	padding: 1%;
+	margin: 2%;
+}
+
+.columnFour{
+	background-color: pink;
+	width: 19%;
+	float: left;
+	padding: 1%;
+	margin: 2%;
+}
+
+.fix{
+	clear: both;
+}
+
+/* ------------------------ footer code ---------------*/
+
+footer{
+	background-color: yellow;
+}
+
+
+#left{
+	background-color: orange;
+	float: left;
+}
+
+#right{
+	background-color: yellow;
+	float: right;
+}
+
+.square{
+	width: 50%;
+	height: 300px;
+}
+
+
+/*----------------- modal images ----------- */
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
